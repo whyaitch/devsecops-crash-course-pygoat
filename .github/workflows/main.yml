@@ -54,14 +54,14 @@ jobs:
        docker scout quickview
        docker scout cves
 
-   - name: Docker Scout Scan
-     uses: docker/scout-action@v1.0.9
-     with:
-       dockerhub-user: ${{ secrets.DOCKER_USERNAME }}
-       dockerhub-password: ${{ secrets.DOCKER_PWD }}
-       command: quickview,cves
-       only-severities: critical,high
-       sarif-file: scout-report.sarif
+#   - name: Docker Scout Scan
+ #    uses: docker/scout-action@v1.0.9
+  #   with:
+   #    dockerhub-user: ${{ secrets.DOCKER_USERNAME }}
+    #   dockerhub-password: ${{ secrets.DOCKER_PWD }}
+     #  command: quickview,cves
+      # only-severities: critical,high
+       #sarif-file: scout-report.sarif
 
    - name: Upload Artifact
      uses: actions/upload-artifact@v3
